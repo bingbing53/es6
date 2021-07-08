@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style></style>
+    <script>
+
+        // const esObj = {
+        //     name: 'es6',
+        //     year: 2015
+        // }
+
+        // Object.freeze(esObj)//冻结
+
+        // esObj.name = 'es2015'
+        // console.log(esObj)
+
+
+        // const arr = ['es6', 'es7', 'es8'];
+        // Object.freeze(arr)//冻结
+        // arr[0] = 'es2015';
+        // console.log(arr)
+
+        // 基本是数据类型
+        // 引入数据类型
+
+
+        const esObj = {
+            name: 'es6',
+            year: 2015,
+            extension: ['es7', 'es8', 'es9', 'es10']
+        }
+        // Object.freeze(esObj)// 第一层冻结
+        myFreeze(esObj)
+        esObj.extension[0] = 'es2016'
+        console.log(esObj)
+
+        //递归冻结方法
+        function myFreeze(obj) {
+            Object.freeze(obj);
+            Object.keys(obj).forEach(function (key) {
+                if (typeof obj[key] === 'object') {
+                    myFreeze(obj[key])
+                }
+            })
+        }
+
+
+        //声明变量 let
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

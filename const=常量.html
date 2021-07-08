@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var es = 'es6';
+        // es = 'es2015'
+        // console.log(es)
+
+        //es3
+        // var BASH_URL='www.baidu.com' //名称大写可能会认为定义一个常量
+        // BASH_URL = 'wwww.imooc.com'
+        // console.log(BASH_URL)
+
+        //es5(在对象上面定义一个新的属性或者是修改对象现有的属性并返回子对象)
+        // Object.defineProperty(window, 'es', {
+        //     value: 'es6',
+        //     writable: false
+        // })
+        // console.log(es)
+        // es = '2015'
+        // console.log(es)
+
+
+        //es6  const 声明常量
+        // const es = 'es6'
+        // console.log(es)
+        // const es = 'es2015'
+        // console.log(es)
+
+
+        //const 在声明变量是一定要赋初始值
+        // const es；
+        //     es = 'es6'
+
+
+        //var定义是允许重名，且后一个会把请一个覆盖
+        // var str = 'es6'
+        // var str = 'es2015'
+        // console.log(str)
+
+        //*****************const定义常量是不允许重名***********
+        const str = 'es6'
+        const str = 'es2015'
+        console.log(es)
+
+        //var 声明对象在window里
+        // var str = 'es6'
+        // console.log(window.str)
+
+        //*************const 声明对象不属于顶层window************
+        const str = 'es6'
+        console.log(window.str)
+
+        // //变量提升
+        // console.log(str)
+        // var str = 'es6'
+        // //相当于
+        // var str;
+        // console.log(str)
+        // str = 'es6'
+
+
+        //*************不存在变量提升***************
+        console.log(str)
+        const str = 'es6'
+
+        //*************暂时性死区*************
+        if (true) {
+            console.log(str)
+            const str = 'es6'
+        }
+
+
+        // if (true) {
+        //     var str = 'es6'
+        // }
+        // console.log(str)
+
+        //***************块级作用域**************
+        if (true) {
+            const str = 'es6'
+        }
+        console.log(str)
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
