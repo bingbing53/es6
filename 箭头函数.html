@@ -47,31 +47,68 @@
 
         const oBtn = document.querySelector('#btn')
         console.log(oBtn)
-        // oBtn.addEventListener('click', function () {
-        //     console.log(this)
-        //     //对于当前对象的引用
-        //     this.style.background = '#f00'
-        // })
+            // oBtn.addEventListener('click', function () {
+            //     console.log(this)
+            //     //对于当前对象的引用
+            //     this.style.background = '#f00'
+            // })
         oBtn.addEventListener('click', () => {
-            console.log(this)
-            //箭头函数里没有this
-            this.style.background = '#f00'
+            // console.log(this)
+            // //箭头函数里没有this
+            // this.style.background = '#f00'
+            // 箭头函数作为事件的回调函数
+            // console.log(this === window)
         })
 
+        // const obj = {
+        //     name: 'moke',
+        //     // showName: function() {
+        //     //     console.log('我的名字：' + this.name)
+        //     // }
+        //     //*************箭头函数不能定义对象里的方法
+        //     // showName: () => {
+        //     //     console.log(this)
+        //     //     console.log('我的名字：' + this.name)
+        //     // }
+        //     showName(){//ES6对象方法的简写形式
+        //         console.log('我的名字：' + this.name)
+        //     }
+        // }
+        // obj.showName()
+
+        // function sum2(x, y) {
+        //     console.log(arguments) //关键字
+        // }
+        // sum2(2, 3)
+        // const sum = (x, y) => {
+        //     console.log(arguments) //****arguments不能使用箭头函数
+        //     return x + y
+        // }
+        // sum(2, 3)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+        // 类
+        // 属性
+        function Course(name, price) {
+            this.name = name;
+            this.price = price
+        }
+        // 方法
+        // Course.prototype.study = function() {
+        //         // 模板字符串
+        //         console.log(`我要学习${this.name},价格是${this.price}`)
+        //     }
+        Course.prototype.study = () => {
+                // 模板字符串
+                console.log(`我要学习${this.name},价格是${this.price}`) //********不能定义原型下方法
+            }
+            // const Course = (name, price) => {
+            //     this.name = name;
+            //     this.price = price
+            // }
+        const c1 = new Course('es', 500) // ******不能使用箭头函数成为构造函数
+        console.log(c1)
+        c1.study()
     </script>
 </body>
 
