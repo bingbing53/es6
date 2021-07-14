@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script>
+        //解构赋值
+        // const course = {
+        //         name: 'es6',
+        //         price: 500,
+        //         teacher: {
+        //             name: 'moke',
+        //             age: 18
+        //         }
+        //     }
+        // const name = course.name;
+        // const price = course.price;
+        //**********左右结构相同
+        //对象)
+        // const {
+        //     name1,
+        //     price,
+        //     teacher: {
+        //         name,
+        //         age
+        //     }
+        // } = course
+        // const {
+        //     name: courseName, //别名
+        //     price,
+        //     teacher: {
+        //         name,
+        //         age
+        //     }
+        // } = course
+        // console.log(courseName, price, name, age)
+        //     //数组
+        // const courseArr = ['es6', 'es7', 'es8'];
+        // const [a, b, c] = courseArr
+        // console.log(a, b, c)
+
+
+        // const sum = arr => {
+        //     let result = 0;
+        //     for (let i = 0; i < arr.length; i++) {
+        //         result += arr[i]
+        //     }
+        //     console.log(result)
+        // }
+        // const sum = ([a, b, c]) => {
+
+        //     console.log(a + b + c)
+        // }
+        // sum([1, 2, 3])
+        // const foo = ({
+        //     name,
+        //     age,
+        //     school = 'xx学校'
+        // }) => {
+        //     console.log(name, age, school)
+        // }
+        // foo({
+        //     name: 'muke',
+        //     age: 20,
+        //     school: 'imooc'
+        // })
+
+        // const foo = () => {
+        //     return {
+        //         name: '张三',
+        //         age: 20
+        //     }
+        // }
+        // const {
+        //     name,
+        //     age
+        // } = foo();
+        // console.log(name, age)
+
+        // let a = 1;
+        // let b = 2;
+        // [b, a] = [a, b]
+        // console.log(a, b)
+
+        //json
+        // const json = '{"name":"es","price":"500"}'
+        // const {
+        //     name,
+        //     price
+        // } = JSON.parse(json);
+        // console.log(name, price)
+        // axios.get('./data.json').then(({
+        //     data
+        // }) => {
+        //     console.log(data)
+        // })
+        axios.get('./data.json').then(({
+            data: {
+                name,
+                type
+            }
+        }) => {
+            console.log(name, type)
+        })
+
+        // 解构赋值应用场景
+        // 函数参数
+        // 函数返回值
+        // 变量互换
+        // JSON应用
+        // Ajax请求应用
+    </script>
+</body>
+
+</html>
